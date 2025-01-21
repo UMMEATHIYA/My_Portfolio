@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umme Athiya - Responsive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            background: #004085;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            background: #f8f9fa;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .credentials-button {
+            background: #004085;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .credentials-button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            background: #004085;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 5px;
+            }
+
+            .card {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Umme Athiya</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="employment.html">Employment</a>
+            <a href="parttime.html">Part Time</a>
+            <a href="internships.html">Internships</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="publications.html">Publications</a>
+            <a href="hobbies.html">Hobbies</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Welcome to My Responsive Portfolio!</h2>
+        <p>This portfolio is now fully responsive and optimized for devices of all sizes.</p>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="card">
+                <img src="images/Advocate IBM Cloud v1.png" alt="IBM Certified Advocate - Cloud v1">
+                <h3>IBM Certified Advocate - Cloud v1</h3>
+                <a href="https://www.credly.com/badges/1949615b-f0ca-467b-8c74-9cd1f40b08a8?source=linked_in_profile" class="credentials-button">View Credentials</a>
+            </div>
+            <!-- Additional cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Umme Athiya. All rights reserved.</p>
+    </footer>
+</body>
+</html>

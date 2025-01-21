@@ -1,0 +1,493 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    background-image: url('images/education.png');
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centering the nav links */
+    gap: 15px; 
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Adding padding for better spacing */
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    flex: 1;
+    width: 80%;
+    margin: auto;
+    overflow-y: auto; /* Add vertical scrolling */
+    padding-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.employment-history {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.employment-history h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.employment-history p {
+    line-height: 1.6;
+}
+
+.employment-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.employment-history ul li {
+    background: #e2e2e2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 0.8em 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}
+
+.internship-history {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.internship-history h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.internship-history p {
+    line-height: 1.6;
+}
+
+.internship-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.internship-history ul li {
+    background: #e2e2e2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #bf5d24;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #333;
+}
+
+.table td {
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #333;
+}
+
+.pdf-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pdf-icon:hover {
+    transform: scale(1.1);
+}
+
+.publications {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.publications h2 {
+    text-align: center;
+    color: #bf5d24;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #bf5d24;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    border-bottom: 5px solid black;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.credentials-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.credentials-button:hover {
+    background-color: #555;
+}
+
+
+.animated-text {
+    animation: floatIn 2s ease-out, swipeIn 2s ease-out, bubble 1s ease-in-out 2s;
+}
+
+.highlight {
+    animation: highlightAnimation 2s infinite alternate;
+}
+
+/* Keyframes for animations */
+@keyframes floatIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlightAnimation {
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: initial;
+    }
+}
+
+.first-right-gif {
+    position: absolute;
+    top: 20%;
+    left: 77%;
+    width: 20%;
+    height: 22%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+.top-right-gif {
+    position: absolute;
+    top: 85%;
+    left: 77%;
+    width: 20%;
+    height: 22%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.bottom-right-gif {
+    position: absolute;
+    bottom: -55%;
+    left: 77%;
+    width: 20%;
+    height: 20%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+.skills-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    max-height: calc(100vh - 100px); /* Adjust according to your header/footer height */
+}
+
+.skills-container img {
+    max-width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.bubble {
+    background-color: #ffd1dc;
+    color: #fff;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+
+.bubble:nth-child(odd) {
+    background-color: #d49517;
+}
+
+.bubble:nth-child(even) {
+    background-color: #043e67;
+}
+
+.bubble:nth-child(3n) {
+    background-color: #c14b4b;
+}
+
+.bubble:nth-child(4n) {
+    background-color: #8313af;
+}
+
+.bubble:nth-child(5n) {
+    background-color: #6b4226;
+}
+
+main {
+    padding: 20px;
+}
+
+.hobbies {
+    text-align: center;
+}
+
+.card1-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card1 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card1-content {
+    padding: 15px;
+}
+
+.card1 h2 {
+    margin: 0 0 10px;
+}
+
+.card1 p {
+    color: #666;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+}
+
+
+.project-video {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.projects-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #c2adad;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 700px;
+    text-align: justify;
+    margin: auto;
+}

@@ -1,0 +1,720 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_SQLITE",
+      "label": "SQLite",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "frser-sqlite-datasource",
+      "pluginName": "SQLite"
+    }
+  ],
+  "__elements": [],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "frser-sqlite-datasource",
+      "name": "SQLite",
+      "version": "3.1.0"
+    },
+    {
+      "type": "panel",
+      "id": "gauge",
+      "name": "Gauge",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "8.5.5"
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "content": "<div style=\"background-color:#00008b\">\n   \n<a href=\"https://ibb.co/bFZgFc8\"><img src=\"https://i.ibb.co/gdpMdkB/ibm-logo.png\" alt=\"ibm-logo\" border=\"0\" width=\"120px\"></a>\n<B><label style=\"font-size: 38px;color:white;margin-left:650px; text-align:center\" for=\"html\">HEALTH MONITORING SYSTEM FOR MOTOR 3M-22\n</label></B>\n</div>\n\n\n\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-RdYlGr"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 0,
+        "y": 3
+      },
+      "id": 4,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT HEALTH FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT HEALTH FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Health",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 3,
+        "y": 3
+      },
+      "id": 5,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT CRITICALITY FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT CRITICALITY FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Criticality",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-RdYlGr"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 6,
+        "y": 3
+      },
+      "id": 6,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT RISK FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT RISK FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Risk",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 9,
+        "y": 3
+      },
+      "id": 7,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n  <h3 style=\"font-size: 25px; margin-top:35px\"><center><b>Useful life is at</br> </br><p style=\"font-size: 40px\">44.2%</p></b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "End of Life",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 12,
+        "y": 3
+      },
+      "id": 12,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n  <h3 style=\"font-size: 35px; margin-top:50px\"><center><b></br>5.6 years</b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Effective Age",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 15,
+        "y": 3
+      },
+      "id": 13,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n  <h3 style=\"font-size: 25px; margin-top:35px\"><center><b>Generating in</br> </br><p style=\"font-size: 40px\">14 days</p></b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Next PM",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 18,
+        "y": 3
+      },
+      "id": 14,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n  <h3 style=\"font-size: 25px; margin-top:35px\"><center><b>Rate is</br> </br><p style=\"font-size: 40px\">0.3%</p></b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "MRR",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 21,
+        "y": 3
+      },
+      "id": 15,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n  <h3 style=\"font-size: 35px; margin-top:50px\"><center><b></br>331 Days</b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "queryType": "table",
+          "rawQueryText": "SELECT END_OF_LIFE FROM HEALTH_DATA;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Next Failure",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 17,
+      "options": {
+        "content": "\n<!DOCTYPE html>\n<html>\n\n<style>\n    table, th, td {\n            border: 5px solid black;\n            font-weight: bold;\n            font-size: 24px;\n        }\n    \n    th, td {\n  background-color: #CCCCE8;\n}\n\n</style>\n<body>\n<h2><b>Health details as of 10:21 AM on 09/03/2023</b></h2>\n<h2 style=\"margin-left:80%\"><b>Scoring group: Pumps </b></h2>\n    <table style=\"width:100%; height:197px\">\n        <tr>\n            <th>Score</th>\n            <th>Contributor</th>\n            <th>Weight</th>\n        </tr>\n        <tr>\n            <td>17</td>\n            <td>FACRULYEARSSAMPLE</td>\n            <td>60%</td>\n        </tr>\n        <tr>\n            <td>87</td>\n            <td>Open Work Orders</td>\n            <td>20%</td>\n        </tr>\n        <tr>\n            <td>25</td>\n            <td> Meter Health</td>\n            <td>20%</td>\n        </tr>   \n    </table>\n</body>\n \n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 18,
+      "options": {
+        "content": "\n<!DOCTYPE html>\n<html>\n\n<style>\n    table, th, td {\n            border: 5px solid black;\n            font-weight: bold;\n            font-size: 24px;\n        }\n    \n    th, td {\n  background-color: #CCCCE8;\n}\n\n</style>\n<body>\n<h2><b>Criticality details as of 10:21 AM on 10/03/2023</b></h2>\n<h2 style=\"margin-left:80%\"><b>Scoring group: Pumps </b></h2>\n    <table style=\"width:100%; height:197px\">\n        <tr>\n            <th>Score</th>\n            <th>Contributor</th>\n            <th>Weight</th>\n        </tr>\n        <tr>\n            <td>25</td>\n            <td>Priority</td>\n            <td>100%</td>\n        </tr>  \n    </table>\n</body>\n \n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 4,
+            "pointSize": 11,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 0,
+        "y": 17
+      },
+      "id": 20,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT HEALTH, FACRULYEARSSAMPLE, OPEN_WORK_ORDERS, METER_HEALTH,  (strftime('%s',TIMESTAMP)) as time  FROM HEALTH_HISTORY;",
+          "queryType": "table",
+          "rawQueryText": "SELECT HEALTH, FACRULYEARSSAMPLE, OPEN_WORK_ORDERS, METER_HEALTH,  (strftime('%s',TIMESTAMP)) as time  FROM HEALTH_HISTORY;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Health History",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 4,
+            "pointSize": 11,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "accMS2"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 12,
+        "y": 17
+      },
+      "id": 21,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "8.5.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT XRMS_Accel, XRMS_Velocity , ZRMS_Accel, (strftime('%s',TIMESTAMP)) as time  FROM INVERTER_FILL;",
+          "queryType": "table",
+          "rawQueryText": "SELECT XRMS_Accel, XRMS_Velocity , ZRMS_Accel, (strftime('%s',TIMESTAMP)) as time  FROM INVERTER_FILL;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Inverter Fill Function: Vacuum Pump Motor Vibration",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2023-03-08T15:16:33.124Z",
+    "to": "2023-03-08T15:27:38.922Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "HEALTH MONITORING SYSTEM FOR MOTOR 3M-22",
+  "uid": "tKjsaVa4k",
+  "version": 15,
+  "weekStart": ""
+}

@@ -1,0 +1,144 @@
+/* Resetting default styles and setting the box-sizing to border-box for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5e6dc;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/education.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centering the nav links */
+    gap: 15px; /* Adding space between nav links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Adding padding for better spacing */
+    font-size: 16px; /* Adjusting font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #bf5d24;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #bf5d24;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #333;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #333;
+}
+
+ul {
+    padding-left: 20px; /* Increase indentation */
+    margin: 0;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+ul li {
+    padding-left: 10px; /* Adjust padding to prevent overflow */
+}
+
+footer {
+    text-align: center;
+    padding: 0.8em 0;
+    background-color: #333;
+    color: #fff;
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+.bottom-center-gif {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    width: 20%;
+    height: 25%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it appears above other content */
+}

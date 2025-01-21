@@ -1,0 +1,231 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/education.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centering the nav links */
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Adding padding for better spacing */
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+section {
+    margin: 10px;
+}
+
+#about,
+#resume,
+#portfolio,
+#contact {
+    display: none;
+}
+
+#about.active,
+#resume.active,
+#portfolio.active,
+#contact.active {
+    display: block;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 0.8em 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.profile {
+    text-align: center;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.animated-text {
+    animation: floatIn 2s ease-out, swipeIn 2s ease-out, bubble 1s ease-in-out 2s;
+}
+
+.highlight {
+    animation: highlightAnimation 2s infinite alternate;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0073b1; /* LinkedIn color */
+}
+
+.social-links a:nth-child(2):hover {
+    color: #333; /* GitHub color */
+}
+
+social-links a:nth-child(3):hover {
+    color: #d44638; /* Email color */
+}
+
+@keyframes floatIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlightAnimation {
+    0% {
+        background-color: rgba(255, 255, 0, 0.5); /* Highlight color */
+    }
+    100% {
+        background-color: rgba(255, 255, 0, 0); /* Transparent */
+    }
+}
+
+.moving-robot {
+    position: absolute;
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    z-index: 10; /* Ensure it appears on top */
+    animation: moveRobot 20s linear infinite;
+}
+
+@keyframes moveRobot {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 100px);
+    }
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+    75% {
+        top: calc(100% - 100px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}

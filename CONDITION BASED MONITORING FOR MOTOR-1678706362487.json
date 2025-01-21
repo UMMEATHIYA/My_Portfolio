@@ -1,0 +1,839 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_SQLITE",
+      "label": "SQLite",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "frser-sqlite-datasource",
+      "pluginName": "SQLite"
+    }
+  ],
+  "__elements": [],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "frser-sqlite-datasource",
+      "name": "SQLite",
+      "version": "3.1.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "8.5.5"
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "iteration": 1678428829192,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": false,
+      "title": "New link",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "content": "<div style=\"background-color:#00008b\">\n   \n<a href=\"https://ibb.co/bFZgFc8\"><img src=\"https://i.postimg.cc/rz6mD3p3/ibm-logo-white-png-1.png\" alt=\"ibm-logo\" border=\"0\" width=\"120px\"></a>\n<B><label style=\"font-size: 38px;color:white;margin-left:650px; text-align:center\" for=\"html\">MACHINE RELIABILITY MONITORING & CONTROL SYSTEM FOR MOTOR 3M-22</br>\nVARIABLE SPEED MOTOR\n</label></B>\n</div>\n\n\n\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 10,
+        "x": 0,
+        "y": 4
+      },
+      "id": 4,
+      "options": {
+        "content": "<!DOCTYPE html>\n<html>\n<title></title>\n<head>\n</head>\n<body>\n<div></div>\n<p>\n<h2><center><b>Live Streaming</b></center></h2>\n<video id=video src=\"http://192.168.0.106:8082\" autoplay=\"autoplay\"  width=1030 height=500/>\n</p>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 8,
+        "x": 10,
+        "y": 4
+      },
+      "id": 25,
+      "options": {
+        "content": "<!DOCTYPE html>\n<html>\n<title></title>\n<head>\n</head>\n<body>\n<div></div>\n<p>\n  <b><center><h2>Reference Image</b> </h2>\n<a href='https://postimg.cc/fkXCGCM2' target='_blank'><img src='https://i.postimg.cc/fkXCGCM2/image-2.png' border='0' alt='image-2' width='750px' height='300px'/></a></br>\n</p>\n<h3><b>Date: 9th March 2023</b></h3>\n<h3><b>Failure Code: Vacuum Pump line blockage.</b></h3>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 4
+      },
+      "id": 23,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n \n  <h3 style=\"font-size: 40px; margin-top:40px\"><center><b>Speed &nbsp &nbsp &nbsp &nbsp &nbsp Current </br>\n  <p>${SPEED} RPM &nbsp &nbsp &nbsp &nbsp &nbsp ${CURRENT} A</p>\n         </b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 22,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 3,
+            "pointSize": 16,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "rotrpm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "TEMPERATURE_CELSIUS"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 6,
+        "x": 18,
+        "y": 9
+      },
+      "id": 20,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT  speed as SPEED,TEMPERATURE_CELSIUS as TEMPERATURE_CELSIUS, (strftime('%s',timestamp)) as time from motor_speed_current;\r\n",
+          "queryType": "table",
+          "rawQueryText": "SELECT  speed as SPEED,TEMPERATURE_CELSIUS as TEMPERATURE_CELSIUS, (strftime('%s',timestamp)) as time from motor_speed_current;\r\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Speed Vs Temperature ",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 10,
+        "x": 0,
+        "y": 16
+      },
+      "id": 26,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n \n  <h3 style=\"font-size: 40px; margin-top:40px\"><center><b>Temperature in ℃ &nbsp &nbsp Temperature in ℉  </br>\n  <p>${Celsius} ℃ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${Fahrenheit}  ℉ </p>\n         </b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 10,
+        "y": 16
+      },
+      "id": 24,
+      "options": {
+        "content": "<html>\n<head>\n\n</head>\n\n<body>\n  <div>\n \n  <h3 style=\"font-size: 40px; margin-top:45px\"><center><b>X-Vibration &nbsp &nbsp Y-Vibration &nbsp &nbsp Z-Vibration </br>\n  <p>${X_Vibration} m/s2 &nbsp &nbsp &nbsp  ${Y_Vibration}  m/s2 &nbsp &nbsp &nbsp ${Z_Vibration} m/s2</p>\n         </b></center></h3>\n  </div>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.5.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 22,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 3,
+            "pointSize": 16,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "amp"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "TEMPERATURE_CELSIUS"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 6,
+        "x": 18,
+        "y": 20
+      },
+      "id": 21,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT  Current_amp as CURRENT,TEMPERATURE_CELSIUS as TEMPERATURE_CELSIUS, (strftime('%s',timestamp)) as time from motor_speed_current;\r\n",
+          "queryType": "table",
+          "rawQueryText": "SELECT  Current_amp as CURRENT,TEMPERATURE_CELSIUS as TEMPERATURE_CELSIUS, (strftime('%s',timestamp)) as time from motor_speed_current;\r\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Current Vs Temperature ",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 22,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 3,
+            "pointSize": 16,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 0,
+        "y": 21
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT temp_celsius as \"Temperature(Celsius)\", (strftime('%s',timestamp)) as time from motor_temperature;",
+          "queryType": "table",
+          "rawQueryText": "SELECT temp_celsius as \"Temperature(Celsius)\", (strftime('%s',timestamp)) as time from motor_temperature;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Temperature in Celsius",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-purples"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 22,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 3,
+            "pointSize": 16,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "fahrenheit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 5,
+        "y": 21
+      },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT temp_fahrenheit as \"Temperature(Fahrenheit)\", (strftime('%s',timestamp)) as time from motor_temperature;",
+          "queryType": "table",
+          "rawQueryText": "SELECT temp_fahrenheit as \"Temperature(Fahrenheit)\", (strftime('%s',timestamp)) as time from motor_temperature;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Temperature in Fahrenheit",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "${DS_SQLITE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 22,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 3,
+            "pointSize": 16,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "accMS2"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 10,
+        "y": 21
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "${DS_SQLITE}"
+          },
+          "queryText": "SELECT vibration_x as \"vibration_x\",vibration_y as \"vibration_y\", vibration_z as \"vibration_z\", (strftime('%s',timestamp)) as time from motor_accelerometer;",
+          "queryType": "table",
+          "rawQueryText": "SELECT vibration_x as \"vibration_x\",vibration_y as \"vibration_y\", vibration_z as \"vibration_z\", (strftime('%s',timestamp)) as time from motor_accelerometer;",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Accelerometer Vibrations",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "select speed as SPEED from motor_speed_current DESC LIMIT 1;\n",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "SPEED",
+        "options": [],
+        "query": "select speed as SPEED from motor_speed_current DESC LIMIT 1;\n",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "SELECT current_amp FROM motor_speed_current DESC LIMIT 1;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "CURRENT",
+        "options": [],
+        "query": "SELECT current_amp FROM motor_speed_current DESC LIMIT 1;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "SELECT vibration_x from motor_accelerometer;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "X_Vibration",
+        "options": [],
+        "query": "SELECT vibration_x from motor_accelerometer;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "select vibration_y from motor_accelerometer;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Y_Vibration",
+        "options": [],
+        "query": "select vibration_y from motor_accelerometer;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "select vibration_z from motor_accelerometer;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Z_Vibration",
+        "options": [],
+        "query": "select vibration_z from motor_accelerometer;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "select temp_celsius from motor_temperature;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Celsius",
+        "options": [],
+        "query": "select temp_celsius from motor_temperature;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "frser-sqlite-datasource",
+          "uid": "${DS_SQLITE}"
+        },
+        "definition": "select temp_fahrenheit from motor_temperature;",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Fahrenheit",
+        "options": [],
+        "query": "select temp_fahrenheit from motor_temperature;",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "2023-03-08T15:16:48.000Z",
+    "to": "2023-03-08T15:28:17.000Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "CONDITION BASED MONITORING FOR MOTOR",
+  "uid": "B3bL9Z-Vz",
+  "version": 80,
+  "weekStart": ""
+}
